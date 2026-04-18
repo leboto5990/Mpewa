@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Mafehlase Mpewa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="water-bg"></div>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- FLOATING HEARTS -->
+<div class="hearts"></div>
+
+<div class="content">
+
+  <!-- MARQUEE -->
+  <marquee class="marquee">
+    ✨✨✨ Mafehlase Mpewa ✨✨✨ Mafehlase Mpewa ✨✨✨
+  </marquee>
+
+  <!-- TITLE -->
+  <h1 class="birthday-text">🎉 Happy Birthday 🎉</h1>
+  <h2 class="name">Mafehlase Mpewa</h2>
+
+  <!-- IMAGE GALLERY -->
+  <div class="gallery">
+    <img src="image1.jpeg" class="photo" alt="Memory 1">
+    <img src="image2.jpeg" class="photo" alt="Memory 2">
+    <img src="image3.jpeg" class="photo" alt="Memory 3">
+  </div>
+
+  <!-- MESSAGE -->
+  <p class="message">
+    Wishing you love, happiness, and endless smiles 💖 <br>
+    May your dreams shine brighter than the stars ✨
+  </p>
+
+</div>
+
+<!-- FIREWORKS SCRIPT -->
+<script>
+document.addEventListener("click", function(e) {
+  let spark = document.createElement("div");
+  spark.className = "spark";
+  spark.style.left = e.clientX + "px";
+  spark.style.top = e.clientY + "px";
+  document.body.appendChild(spark);
+
+  setTimeout(() => spark.remove(), 1000);
+});
+</script>
+<footer class="footer">
+  Developed by T.Leboto
+</footer>
+</body>
+</html>

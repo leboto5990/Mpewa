@@ -1,0 +1,277 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+/* WATER BACKGROUND */
+.water-bg {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #00c6ff);
+  animation: waterMove 10s infinite linear;
+  z-index: -1;
+}
+
+@keyframes waterMove {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-25%, -25%); }
+  100% { transform: translate(0,0); }
+}
+
+/* CONTENT (FIXED) */
+.content {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+}
+
+/* MARQUEE */
+.marquee {
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+/* TITLE */
+.birthday-text {
+  font-size: 60px;
+  color: gold;
+  text-shadow: 0 0 20px yellow;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px white; }
+  to { text-shadow: 0 0 40px gold; }
+}
+
+.name {
+  font-size: 40px;
+}
+
+/* MESSAGE */
+.message {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 3px solid white;
+  transition: 0.3s;
+}
+
+.photo:hover {
+  transform: scale(1.1);
+}
+
+/* HEARTS */
+.hearts::before {
+  content: "💖 💕 💓 💗 💞 💘";
+  position: fixed;
+  width: 100%;
+  animation: floatHearts 10s linear infinite;
+  font-size: 30px;
+}
+
+@keyframes floatHearts {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* FIREWORK */
+.spark {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* WATER BACKGROUND */
+.water-bg {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #00c6ff);
+  animation: waterMove 10s infinite linear;
+  z-index: -1;
+}
+
+@keyframes waterMove {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-25%, -25%); }
+  100% { transform: translate(0,0); }
+}
+
+/* CONTENT */
+.content {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+/* MARQUEE */
+.marquee {
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* TITLE */
+.birthday-text {
+  font-size: 60px;
+  color: gold;
+  text-shadow: 0 0 20px yellow;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px white; }
+  to { text-shadow: 0 0 40px gold; }
+}
+
+.name {
+  font-size: 40px;
+}
+
+/* MESSAGE */
+.message {
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 0 15px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 3px solid white;
+  transition: 0.3s;
+}
+
+.photo:hover {
+  transform: scale(1.1);
+}
+
+/* HEARTS */
+.hearts::before {
+  content: "💖 💕 💓 💗 💞 💘";
+  position: fixed;
+  width: 100%;
+  animation: floatHearts 10s linear infinite;
+  font-size: 30px;
+  pointer-events: none;
+}
+
+@keyframes floatHearts {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* FIREWORK CLICK EFFECT */
+.spark {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .birthday-text {
+    font-size: 35px;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .marquee {
+    font-size: 18px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo {
+    width: 90%;
+    height: auto;
+  }
+
+  .content {
+    padding-top: 50px;
+  }
+}/* FOOTER */
+.footer {
+  position: relative;
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border-top: 2px solid white;
+}
